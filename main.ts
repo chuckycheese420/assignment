@@ -9,6 +9,14 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         tubboTrowsers.vy = -200
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`door`, function (sprite, location) {
+    destroyDoor()
+    scene.setBackgroundImage(assets.image`Level2background`)
+    tiles.setTilemap(tilemap`level0`)
+})
+function destroyDoor () {
+    travelDoor.destroy()
+}
 let travelDoor: Sprite = null
 let tubboTrowsers: Sprite = null
 scene.setBackgroundImage(assets.image`background`)
@@ -37,5 +45,5 @@ for (let value of tiles.getTilesByType(assets.tile`door`)) {
         . . . e e e e e e e e e e . . . 
         `, SpriteKind.door)
     tiles.placeOnTile(travelDoor, value)
-    tiles.setTileAt(value, assets.tile`transparency16`)
+    tiles.setTileAt(value, assets.tile`door`)
 }
