@@ -13,3 +13,21 @@ tubboTrowsers = sprites.create(assets.image`pants player`, SpriteKind.Player)
 controller.moveSprite(tubboTrowsers, 100, 0)
 tubboTrowsers.ay = 350
 scene.cameraFollowSprite(tubboTrowsers)
+let mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e 5 5 e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    . . . e e e e e e e e e e . . . 
+    `, SpriteKind.Player)
